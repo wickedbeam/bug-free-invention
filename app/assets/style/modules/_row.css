@@ -96,7 +96,7 @@
 		}
 	}
 	
-	&__equal-height-at-medium {
+	.flexbox &__equal-height-at-medium {
 		/* Begin Equal height rules ให้มันยาวเท่ากับอันที่ยาวที่สุด*/
 		@mixin atMedium {
 			display: flex;
@@ -108,7 +108,7 @@
 		}
 	}
 	
-	&__equal-height-at-large {
+	.flexbox &__equal-height-at-large {
 		/* Begin Equal height rules ให้มันยาวเท่ากับอันที่ยาวที่สุด*/
 		@mixin atLarge {
 			display: flex;
