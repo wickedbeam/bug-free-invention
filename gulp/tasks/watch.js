@@ -20,6 +20,10 @@ gulp.task('watch',function() {
 		//gulp.start('styles'); //ถ้ามี cssInject ไม่ต้องใช้บรรทัดนี้แล้ว เพราะเราจะให้ task style รวมอยู่ใน Inject
 		gulp.start('cssInject');
 	});
+	
+	watch('./app/assets/scripts/**/*.js', function() {
+		gulp.start('scriptsRefresh');
+	});
 });
 
 
@@ -27,3 +31,9 @@ gulp.task('cssInject',['styles'], function() { //แปลว่า cssInject �
 	return gulp.src('./app/temp/styles/style.css')
 	.pipe(browserSync.stream());
 });
+
+gulp.task('scriptsRefresh',['scripts'], function() { 
+	browserSync.reload();
+});
+
+
